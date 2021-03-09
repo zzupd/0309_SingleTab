@@ -4,6 +4,7 @@
 * {
     color: #000;
     padding: 0;
+    border: none;
     margin: 0;
     box-sizing: border-box;
 }
@@ -19,7 +20,7 @@ ul            { list-style: none; }
 
 
 div#wrap {
-    width: 400px;
+    width: 460px;
     padding: 20px;
     border: 1px solid #000;
     margin: 0 auto;
@@ -31,9 +32,11 @@ div#wrap {
 
 
 
-/* 싱글탭 시작 */
+/* 멀티탭 시작 */
+
+    /* 멀티탭 공통 작업 시작 */
 div#tabArea {  /* 탭버튼과 탭내용을 둘러싼 외부 */
-    width: 330px;
+    width: 400px;
     padding: 10px;
     /*border: 1px solid #08f;*/
     margin: 10px;
@@ -46,20 +49,69 @@ button {
     padding: 4px 10px;
     border: 1px solid #aaa;
     border-bottom: none;
-    margin-left: 30px;
 
     position: relative;
     top: 1px;
 }
 
-div#tabArea > div#tabContent1 {
-    padding: 26px 10px;
+button:first-child {
+    margin-left: 30px;
+}
+
+div#tabArea > div {
+    padding: 24px 10px;
     border: 1px solid #aaa;
 
     display: inline-block;
 
 }
-/* 싱글탭 끝 */
+    /* 멀티탭 공통 작업 끝 */
+
+
+    /* 공지사항 영역 */
+/*#tabArea #tabContent1 #bbsNotice span {
+    border: 1px solid #000;
+}*/
+#tabArea #tabContent1 {
+    padding: 6px 26px 6px 16px;
+}
+/*#tabArea #tabContent1 #bbsNotice {
+    border: 1px solid #000;
+}*/
+#tabArea #tabContent1 #bbsNotice>li {
+    line-height: 32px;
+}
+#tabArea span:first-child {
+    width: 230px;
+
+    display: inline-block;
+}
+    /* 공지사항 영역 끝 */
+
+    /* 갤러리 영역 */
+img {
+    vertical-align: middle;
+}
+    /* 갤러리 영역 끝 */
+
+
+    /* 멀티탭 클릭 기능 구현 */
+
+button:nth-child(2) {
+    border: none;
+    top: 0px;
+    left: -6px;
+}
+
+#tabArea #tabContent2 {
+    display: none;
+}
+
+    /* 멀티탭 클릭 기능 구현 끝 */
+
+
+
+/* 멀티탭 끝 */
 
 
 
